@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online-Profil von Sören Ehm</title>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<header id="nav-menue">
+    <div class="container">
+        <a href="#" id="headerlogo">Online-Profil</a>
+        <nav id="orientation">
+            <ul>
+                <li><a href='index.html'>Home</a></li>
+                <li class="active"><a th:href="@{/persoenlich/{lastName}(lastName='Ehm')}">Persönliche Daten</a></li>
+                <li><a href='beruf.html'>Berufstätigkeit</a></li>
+                <li><a href='ausbildung.html'>Ausbildung</a></li>
+                <li><a href='berufserfahrung.html'>Berufserfahrung</a></li>
+                <li><a href='projekte.html'>Projekte</a></li>
+                <li><a href='druck.html'>Druck</a></li>
+            </ul>
+        </nav>
+        <a class="menue-button box-shadow-menu"
+           href="#"></a>
+    </div>
+</header>
+<section>
+    <div class="container">
+        <h3>
+            Persönliche Daten
+        </h3>
+        <table>
+            <tr class="dark">
+                <td>Name</td>
+                <td>
+                    <span th:text="${person.firstName}">Vorname</span>
+                    <span th:text="${person.lastName}">Nachname</span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>Anschrift</td>
+                <td th:each="address : ${person.addresses}">
+                    <span th:text="${address.street}">Strasse</span><br/>
+                    <span th:text="${address.postalCode}">PLZ></span>
+                    <span th:text="${address.city}">Stadt</span>
+                </td>
+            </tr>
+            <tr class="dark">
+                <td>E-Mail</td>
+                <td><a href="mailto:s.ehm@soeren-ehm.de" th:text="${person.getEMail()}">eMail</a></td>
+            </tr>
+            <tr class="light">
+                <td>Jahrgang</td>
+                <td th:text="${#dates.format(person.birthDate, 'yyyy')}">YYYY</td>
+            </tr>
+        </table>
+        <!--/*@thymesVar id="errorMessage" type="java.lang.Exception"*/-->
+        <p th:text="${errorMessage}">Exception</p>
+    </div>
+</section>
+<footer>
+    <div class="container fp">
+        <p>Online-Profil von Sören Ehm</p>
+        <p><a href="mailto:info@soeren-ehm.de" th:text="${person.getEMail()}">eMail</a></p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+sudo: required
+
+language: java
+
+services:
+  - docker
+
+before_script:
+- docker-compose up -d
+
+script:
+- mvn clean test
+
+after_script:
+- docker-compose down

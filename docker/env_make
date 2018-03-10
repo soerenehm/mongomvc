@@ -1,0 +1,2 @@
+PORTS = -p 8080:8080
+FINAL_NAME = mongomvc-1.0.0-SNAPSHOT.jar

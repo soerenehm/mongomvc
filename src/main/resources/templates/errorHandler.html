@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online-Profil von Sören Ehm</title>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<section>
+    <div class="container">
+        <h3>
+            Exception Handling
+        </h3>
+        <!--/*@thymesVar id="exception" type="java"*/-->
+        <p th:text="${exception}">Exception</p>
+    </div>
+</section>
+</body>
+</html>
