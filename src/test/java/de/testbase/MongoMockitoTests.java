@@ -25,12 +25,10 @@ public class MongoMockitoTests {
 
     @InjectMocks
     private PersonService personService;
-
     @Mock
     private PersonRepository personRepository;
 
     private Person person;
-    private Address address;
 
     @Before
     public void init() throws Exception {
