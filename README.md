@@ -47,3 +47,4 @@ $ db.persons.find() # Execute query
 ```
 
    
+[![Build Status](https://travis-ci.org/soerenehm/mongomvc.svg?branch=master)](https://travis-ci.org/soerenehm/mongomvc.svg?branch=master)   
