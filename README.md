@@ -24,7 +24,7 @@ Following dependencies are used:
  
 ### Use Docker Compose for creating Spring Boot Application with MongoDB
 
-In parent folder `make` creates two docker container named
+In parent folder `make` creates two docker container named 
 
 * mongomvc (Spring Boot MVC Application)
 
@@ -34,14 +34,16 @@ and run tests afterwards.
 
 Attach to mongodb container:
 
-    `docker exec -it mongodb bash`
+```sh-session
+$ docker exec -it mongodb bash 
+```
     
-and execute queries:    
+and execute queries:
 
-    Starting mongo client by `mongo`
-     
-    Change database by `use custom`
-    
-    Execute query by `db.persons.find()`. 
+```sh-session
+$ mongo # Starts mongo client
+$ use custom # Change database
+$ db.persons.find() # Execute query
+```
 
    

@@ -1,5 +1,5 @@
 env:
- - FINAL_NAME = mongomvc-1.0.0-SNAPSHOT.jar
+ - FINAL_NAME=mongomvc-1.0.0-SNAPSHOT.jar
 
 sudo: required
 
@@ -9,10 +9,7 @@ services:
   - docker
 
 before_script:
- - mvn clean install -DskipTests
- - cp ./target/$(FINAL_NAME) ./docker
- - docker-compose up -d
- - rm ./docker/$(FINAL_NAME)
+ - ./build.sh
 
 script:
  - mvn clean test
