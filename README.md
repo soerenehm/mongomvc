@@ -1,7 +1,6 @@
 ## Spring Boot MVC Application 
 
 Thymeleaf template is filled at startup by document entities stored in mongodb database configured by application properties.
-Entry Url is `localhost:8080`.
 
 Following dependencies are used: 
 
