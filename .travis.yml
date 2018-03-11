@@ -1,6 +1,3 @@
-env:
- - FINAL_NAME=mongomvc-1.0.0-SNAPSHOT.jar
-
 sudo: required
 
 language: java
