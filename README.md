@@ -1,4 +1,4 @@
-## Spring Boot MVC Application 
+## Spring Boot MVC Application [![Build Status](https://travis-ci.org/soerenehm/mongomvc.svg?branch=master)](https://travis-ci.org/soerenehm/mongomvc.svg?branch=master)
 
 Thymeleaf template is filled at startup by document entities stored in mongodb database configured by application properties.
 
@@ -43,7 +43,4 @@ and execute queries:
 $ mongo # Starts mongo client
 $ use custom # Change database
 $ db.persons.find() # Execute query
-```
-
-   
-[![Build Status](https://travis-ci.org/soerenehm/mongomvc.svg?branch=master)](https://travis-ci.org/soerenehm/mongomvc.svg?branch=master)   
+``` 
