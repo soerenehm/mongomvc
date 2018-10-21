@@ -1,4 +1,6 @@
-## Spring Boot MVC Application [![Build Status](https://travis-ci.org/soerenehm/mongomvc.svg?branch=master)](https://travis-ci.org/soerenehm/mongomvc.svg?branch=master)
+## Spring Boot MVC Application
+
+[![Build Status](https://travis-ci.org/soerenehm/mongomvc.svg?branch=master)](https://travis-ci.org/soerenehm/mongomvc.svg?branch=master)
 
 Thymeleaf template is filled at startup by document entities stored in mongodb database configured by application properties.
 
